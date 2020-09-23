@@ -1,0 +1,4 @@
+praw==7.1.0
+prawcore==1.4.0
+discord==1.0.1
+discord.py==1.4.1
