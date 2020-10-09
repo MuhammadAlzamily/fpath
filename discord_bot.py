@@ -1,9 +1,10 @@
 import discord
 import praw
-from discord.ext import commands
+from discord.ext import commands, tasks
 import random
 import requests
 import os
+from itertools import cycle
 filehandle = open("commands.md")
 filehandle = filehandle.read()
 bot = commands.Bot(command_prefix='$', case_insensitive=True)
@@ -18,9 +19,7 @@ dad_jokes_subs = ['dadjokes']
 
 @bot.event
 async def on_ready():
-    print("bot connected")
-    print(bot.user)
-
+    await bot.change_presence(activity=discord.Game(name="with ur feelings"))
 
 myembed = discord.Embed(type="rich",
                         colour=discord.Color.dark_red(), description=filehandle)
