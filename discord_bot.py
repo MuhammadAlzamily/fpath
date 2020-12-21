@@ -79,7 +79,7 @@ async def joke(ctx):
 
 headers = {
     'x-rapidapi-host': "covid-19-data.p.rapidapi.com",
-    'x-rapidapi-key': "6f8f5d760bmsh67db04f0c711434p11b987jsne23a91fa6cc9"
+    'x-rapidapi-key': "YOUR_API_KEY"
 }
 
 url = "https://covid-19-data.p.rapidapi.com/country"
@@ -99,4 +99,4 @@ async def covid(ctx, arg):
     for k, v in resp.items():
         cases.add_field(name=k, value=v, inline=False)
     await ctx.send(embed=cases)
-bot.run("NzUzNjEwMDY4MjI1OTQ5NzY4.X1osEQ.6lKqDGgiv1AjmNxKN5HdCynT_JI")
+bot.run("YOUR_DISCORD_TOKEN")
